@@ -19,7 +19,6 @@ const postSlice = createSlice({
     addPost: (state, action) => {
       state.items.push(action.payload);
       savePosts(state.items);
-      console.log("slice action:", action);
     },
     updatePost: (state, action) => {
       const { id, userName, postBody, image, hashtags } = action.payload;
@@ -36,12 +35,9 @@ const postSlice = createSlice({
     },
 
     removePost: (state, action) => {
-      const { id } = action.payload;
-      const deletingPost = state.items.find((post) => post.id == id);
-
-      if (deletingPost) {
-        return state.items.filter((f) => f.id !== id);
-      }
+      const idToDelete = action.payload;
+      state.items = state.items.filter((post) => post.id !== idToDelete);
+      savePosts(state.items);
     },
   },
 });

@@ -1,6 +1,7 @@
 import { Camera, SquarePen, SquarePlay } from "lucide-react";
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { DEBARUP_PROFILR_PIC } from "../../utils/constant";
 
 const StartPostCard = () => {
   const navigate = useNavigate();
@@ -9,10 +10,9 @@ const StartPostCard = () => {
       <div className="bg-gray-100 md:mx-2 rounded-lg">
         <div className="flex flex-row items-center p-3 m-1 gap-2">
           {" "}
-          {/* Added `flex` here */}
           <img
             className="size-7 ml-2 md:ml-1 lg:ml-0 md:size-9 lg:size-12 cursor-pointer rounded-full"
-            src="https://media.licdn.com/dms/image/v2/D5603AQHNrIPltDVRdw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724494014825?e=1746662400&v=beta&t=hKI2wUtK9epfiq-T-yKtsUUCQP7hZOTVtbqZ0wBsaUU"
+            src={DEBARUP_PROFILR_PIC}
             alt=""
           />
           <span

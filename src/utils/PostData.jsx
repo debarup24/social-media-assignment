@@ -24,20 +24,4 @@ At Wylo, we’re building a platform that will help brands and coaches build thr
     🚀 Hello.. My name is Debarup and I'm a full-stack developer with a strong focus on frontend development (React, Next.js, Tailwind CSS) and have experience in backend technologies like Node.js, Express.js, MongoDB, Electron.js. I would love to connect and explore if there is an opportunity to contribute.   In my previous internship I got the opportunity to contribute at an early stage startup where I gained valuable experience in building applications from scratch using React.JS and Next.js. I also worked on integrating AI-powered features,`,
     hashtags: "#Jobs, #JobHunting",
   },
-  {
-    id: "03",
-    userName: "DEVRUP",
-    visibility: "Public",
-    postBody:
-      " ⚡ Key Features: 🚀 Real-time collaborative editing with live cursor ",
-    hashtags: "#Jobs, #JobHunting",
-  },
-  {
-    id: "04",
-    userName: "Sarkar",
-    visibility: "Public",
-    postBody:
-      " ⚡ Key Features: 🚀 Real-time collaborative editing with live cursor tracking . 🚀 e cursor tracking. 🤖 AI-assisted coding – suggestions, bug fixes & smart documentation. 💬 ",
-    hashtags: "#AI, #Development #Coding",
-  },
 ];

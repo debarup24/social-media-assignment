@@ -17,7 +17,7 @@ const AddPost = () => {
     if (file) {
       const reader = new FileReader();
       reader.onloadend = () => {
-        setImage(reader.result); // Convert image to base64 and set it
+        setImage(reader.result); // Convert imG to base64 & set it
       };
       reader.readAsDataURL(file);
     }

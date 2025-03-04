@@ -1,7 +1,6 @@
-import { SquareMenu } from "lucide-react";
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import ProfileCard from "./cards/ProfileCard";
+import { DEBARUP_PROFILR_PIC } from "../utils/constant";
 
 const RightSidebar = () => {
   return (
@@ -17,7 +16,7 @@ const RightSidebar = () => {
         <div className="flex flex-row gap-2 cursor-pointer px-1">
           <img
             className="size-6 cursor-pointer rounded-full"
-            src="https://media.licdn.com/dms/image/v2/D5603AQHNrIPltDVRdw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724494014825?e=1746662400&v=beta&t=hKI2wUtK9epfiq-T-yKtsUUCQP7hZOTVtbqZ0wBsaUU"
+            src={DEBARUP_PROFILR_PIC}
             alt=""
           />
           <p className="text-sm text-slate-700 font-medium">Debarup</p>

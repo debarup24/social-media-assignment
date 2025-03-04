@@ -1,4 +1,10 @@
 import React from "react";
+import {
+  CARD_IMG_1,
+  CARD_IMG_2,
+  CARD_IMG_3,
+  CARD_IMG_4,
+} from "../../utils/constant";
 
 const StoryCards = () => {
   return (
@@ -12,33 +18,27 @@ const StoryCards = () => {
 
       <img
         className="h-28 w-20 md:h-36 md:w-24 flex cursor-pointer rounded-xl "
-        src="https://wallpapers.com/images/high/aesthetic-view-of-vietnam-s-halong-bay-hgv9um9jx8c4dr9d.webp"
+        src={CARD_IMG_1}
         alt=""
       />
 
       <img
         className="h-28 w-20 md:h-36 md:w-24 relative cursor-pointer rounded-xl "
-        src="https://wallpapers.com/images/high/tree-swing-set-on-a-hill-2er1mhvywpsr0pnw.webp"
+        src={CARD_IMG_2}
         alt=""
       />
 
       <img
         className="h-28 w-20 md:h-36 md:w-24 relative cursor-pointer rounded-xl "
-        src="https://wallpapers.com/images/high/hill-background-dgugwucv383ap7ok.webp"
+        src={CARD_IMG_3}
         alt=""
       />
 
       <img
         className="h-28 w-20 md:h-36 md:w-24 relative cursor-pointer rounded-xl "
-        src="https://wallpapers.com/images/high/staring-in-hill-with-sadness-y6ovjc1994bl9jwe.webp"
+        src={CARD_IMG_4}
         alt=""
       />
-
-      {/* <img
-        className="h-28 w-20 md:h-36 md:w-24 relative cursor-pointer rounded-xl "
-        src="https://wallpapers.com/images/high/tree-swing-set-on-a-hill-2er1mhvywpsr0pnw.webp"
-        alt=""
-      /> */}
     </div>
   );
 };

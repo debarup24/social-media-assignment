@@ -17,10 +17,6 @@ function App() {
           <Route path="/" element={<MainBody />} />
           <Route path="/add-post" element={<AddPost />} />
           <Route path="/edit-post/:id" element={<UpdatePost />} />
-
-          {/* <Route path="/users" element={<UsersPage />} />
-        <Route path="/sales" element={<SalesPage />} />
-        <Route path="/orders" element={<OrdersPage />} /> */}
         </Routes>
 
         <RightSidebar />

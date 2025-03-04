@@ -21,7 +21,7 @@ const MainBody = () => {
   const dispatch = useDispatch();
 
   const handleDeletePost = (id) => {
-    dispatch(removePost({ id: id }));
+    dispatch(removePost(id));
   };
 
   return (
