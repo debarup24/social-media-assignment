@@ -9,7 +9,7 @@ import {
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-const SIDEBAR_ITEMS = [
+export const SIDEBAR_ITEMS = [
   { name: "Home", icon: HomeIcon, color: "#6366f1", href: "/" },
   { name: "Search", icon: Search, color: "#8B5CF6", href: "/search" },
   { name: "Notification", icon: Bell, color: "#EC4899", href: "/notify" },
@@ -32,7 +32,7 @@ const LeftSidebar = () => {
 
   return (
     <div
-      className={`relative z-10 h-screen flex-shrink-0 shadow-lg shadow-slate-300 ${
+      className={`relative hidden md:hidden lg:hidden xl:block z-10 h-screen flex-shrink-0 shadow-lg shadow-slate-300 ${
         isSidebarOpen ? "w-80" : "w-32"
       }`}
     >

@@ -7,9 +7,21 @@ const AddPost = () => {
   const [userName, setUserName] = useState("");
   const [postBody, setPostBody] = useState("");
   const [hashtags, setHashTags] = useState("");
+  const [image, setImage] = useState(null);
 
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const handleImageUpload = (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onloadend = () => {
+        setImage(reader.result); // Convert image to base64 and set it
+      };
+      reader.readAsDataURL(file);
+    }
+  };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
@@ -19,6 +31,7 @@ const AddPost = () => {
       userName: userName,
       postBody: postBody,
       hashtags: hashtags,
+      image: image,
       visibility: "Public",
     };
 
@@ -58,6 +71,29 @@ const AddPost = () => {
                   required
                 />
               </div>
+
+              <label className="block text-sm font-medium mb-2">
+                Upload Image
+              </label>
+              <div className="mb-4 flex items-center gap-3 w-1/2 px-5 py-2.5 rounded-xl bg-gray-200">
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={handleImageUpload}
+                  className="w-full bg-transparent outline-none cursor-pointer"
+                />
+              </div>
+
+              {/* Preview that img */}
+              {image && (
+                <div className="mb-4">
+                  <img
+                    src={image}
+                    alt="Uploaded"
+                    className="w-24 h-24 rounded-lg"
+                  />
+                </div>
+              )}
 
               <label className="block text-sm font-medium mb-2">Hashtags</label>
               <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-xl bg-gray-200">

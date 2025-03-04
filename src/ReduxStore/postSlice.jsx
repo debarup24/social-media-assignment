@@ -22,7 +22,7 @@ const postSlice = createSlice({
       console.log("slice action:", action);
     },
     updatePost: (state, action) => {
-      const { id, userName, postBody, hashtags } = action.payload;
+      const { id, userName, postBody, image, hashtags } = action.payload;
 
       const updatingPost = state.items.find((post) => post.id == id);
 
@@ -30,7 +30,7 @@ const postSlice = createSlice({
         updatingPost.userName = userName;
         updatingPost.postBody = postBody;
         updatingPost.hashtags = hashtags;
-
+        updatingPost.image = image;
         savePosts(state.items);
       }
     },

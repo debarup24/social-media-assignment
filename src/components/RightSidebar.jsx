@@ -5,7 +5,9 @@ import ProfileCard from "./cards/ProfileCard";
 
 const RightSidebar = () => {
   return (
-    <div className={`relative w-96 z-10 h-screen flex-shrink-0 shadow-md`}>
+    <div
+      className={`relative hidden md:hidden lg:hidden xl:block w-80 z-10 h-screen flex-shrink-0 shadow-md`}
+    >
       {/* for toggle and name */}
 
       <div className="flex justify-between gap-1.5 p-5">

@@ -5,23 +5,25 @@ import { useNavigate } from "react-router-dom";
 const StartPostCard = () => {
   const navigate = useNavigate();
   return (
-    <div className="flex flex-col items-center justify-center mt-2 py-3">
-      <div className="bg-gray-100 rounded-lg">
+    <div className="flex flex-col mx-1 items-center justify-center mt-2 py-3 px-24">
+      <div className="bg-gray-100 md:mx-2 rounded-lg">
         <div className="flex flex-row items-center p-3 m-1 gap-2">
           {" "}
           {/* Added `flex` here */}
           <img
-            className="size-12 cursor-pointer rounded-full"
+            className="size-7 ml-2 md:ml-1 lg:ml-0 md:size-9 lg:size-12 cursor-pointer rounded-full"
             src="https://media.licdn.com/dms/image/v2/D5603AQHNrIPltDVRdw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1724494014825?e=1746662400&v=beta&t=hKI2wUtK9epfiq-T-yKtsUUCQP7hZOTVtbqZ0wBsaUU"
             alt=""
           />
           <span
-            className="bg-gray-100 border border-slate-800 py-3 px-52 rounded-full cursor-pointer"
+            className="bg-gray-100 border border-slate-800 py-2.5 md:py-2.5 lg:py-3 px-32 md:px-52 lg:px-52 md:mx-2 rounded-full cursor-pointer"
             onClick={() => {
               navigate("/add-post");
             }}
           >
-            <p className="text-sm text-gray-600">Start Posting today</p>
+            <p className="text-[10px] md:text-xs lg:text-xs text-gray-600">
+              Start Posting today
+            </p>
           </span>
         </div>
 
@@ -32,7 +34,7 @@ const StartPostCard = () => {
               navigate("/add-post");
             }}
           >
-            <SquarePlay className="text-green-600" />
+            <SquarePlay className="text-green-600 size-5 md:size-7" />
             <p className="text-sm">Video</p>
           </div>
 
@@ -42,7 +44,7 @@ const StartPostCard = () => {
               navigate("/add-post");
             }}
           >
-            <Camera className="text-blue-600" />
+            <Camera className="text-blue-600 size-5 md:size-7" />
             <p className="text-sm">Photo</p>
           </div>
 
@@ -52,7 +54,7 @@ const StartPostCard = () => {
               navigate("/add-post");
             }}
           >
-            <SquarePen className="text-red-500" />
+            <SquarePen className="text-red-500 size-5 md:size-7" />
             <p className="text-sm">Write</p>
           </div>
         </div>

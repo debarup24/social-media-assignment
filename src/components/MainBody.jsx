@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { removePost } from "../ReduxStore/postSlice";
+import Navbar from "./Navbar";
 
 const MainBody = () => {
   const posts = useSelector((store) => store.post.items);
@@ -25,14 +26,16 @@ const MainBody = () => {
 
   return (
     <div className="flex-1 overflow-auto no-scrollbar relative z-10">
+      <Navbar />
+
       <StoryCards />
       <StartPostCard />
 
-      <div className=" flex flex-col py-2 min-w-[600px] items-center justify-center gap-y-2.5 px-24">
+      <div className=" flex flex-col py-2 items-center justify-center gap-y-2.5 px-24">
         {posts.map((post, index) => (
           <div
             key={index}
-            className="bg-gray-100 border border-gray-300 shadow-sm shadow-gray-200 rounded-lg py-2 w-[620px] px-4"
+            className="bg-gray-100 border border-gray-300 shadow-sm shadow-gray-200 rounded-lg py-2 w-[370px] md:w-[510px] lg:w-[630px] px-4"
           >
             <div className="flex px-2 pb-2 my-1 flex-row justify-between">
               <div>
@@ -62,12 +65,19 @@ const MainBody = () => {
               </div>
             </div>
             <div>
-              <p>{post.postBody} </p>
+              <p className="p-1 mb-2">{post.postBody} </p>
+              {post.image && (
+                <img
+                  src={post.image}
+                  alt="Post"
+                  className="w-[360px] md:w-[400px] lg:w-[600px] rounded-lg my-2"
+                />
+              )}
               <span className="font-semibold text-blue-600 mt-2 mb-1 text-sm">
                 {post.hashtags}
               </span>
             </div>
-            <div className="px-12 pt-3 pb-1 flex flex-row justify-between">
+            <div className="px-7 md:px-9 lg:px-12 pt-3 pb-1 flex flex-row justify-between">
               <ThumbsUp
                 size={21}
                 className="text-gray-700 hover:text-black cursor-pointer"
