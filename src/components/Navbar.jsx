@@ -15,9 +15,9 @@ const Navbar = () => {
       <div className="flex gap-1.5 p-3">
         <button onClick={expandNavbar}>
           {isExpanded ? (
-            <RxCross1 SquareMenu className="h-6 w-6 " />
+            <RxCross1 className="h-6 w-6" />
           ) : (
-            <SquareMenu className="h-6 w-6 " />
+            <SquareMenu className="h-6 w-6" />
           )}
         </button>
 
@@ -28,8 +28,14 @@ const Navbar = () => {
 
       {isExpanded && (
         <div className="w-full h-screen p-5">
-          <p className="p-4 border-b border-gray-600 ">Home</p>
-          <p className="p-4 border-b border-gray-600">Search</p>
+          <Link to={"/"}>
+            {" "}
+            <p className="p-4 border-b border-gray-600">Home</p>
+          </Link>
+          <Link to={"/"}>
+            {" "}
+            <p className="p-4 border-b border-gray-600">Search</p>
+          </Link>
           <p className="p-4 border-b border-gray-600">Notification</p>
           <p className="p-4 border-b border-gray-600">Message</p>
           <Link to={"/add-post"}>
